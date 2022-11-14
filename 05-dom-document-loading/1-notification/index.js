@@ -1,6 +1,8 @@
 export default class NotificationMessage {
+  INITIAL_DURATION = 1000
+  timerId;
+  static activeNotification;
 
-<<<<<<< HEAD
   constructor(message = '', {type = 'success', duration = this.INITIAL_DURATION} = {}) {
     this.message = message;
     this.type = type;
@@ -52,6 +54,4 @@ export default class NotificationMessage {
     NotificationMessage.activeNotification = null;
     this.remove();
   }
-=======
->>>>>>> 13f2473178e70fd82c124b66e8d5a3ce1c8b4cef
 }
