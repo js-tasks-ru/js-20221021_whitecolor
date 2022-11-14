@@ -7,7 +7,6 @@ export default class NotificationMessage {
     this.message = message;
     this.type = type;
     this.duration = duration;
-
     this.render();
   }
 
