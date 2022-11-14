@@ -11,9 +11,7 @@ export default class ColumnChart {
   }
 
   getTitleTemplate() {
-    let link = '';
-    if (this.link)
-      link = `<a href="/${this.link}" class="column-chart__link">View all</a>`;
+    let link = this.link ? `<a href="/${this.link}" class="column-chart__link">View all</a>` : '';
     return `<div class="column-chart__title">Total ${this.label && this.label}${link}</div>`;
   }
 
