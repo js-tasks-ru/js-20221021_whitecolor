@@ -25,8 +25,7 @@ export default class SortableTable {
     const rows = sortedData.map(({id: productId}, index) => `
       <a href="${productId ? '/products/' + productId : '#'}" class="sortable-table__row">
         ${this.headerConfig.map(({id, template}) => template ? template() : `
-          <div class="sortable-table__cell">${sortedData[index][id] ?? ''}</div>
-        `).join('')}
+          <div class="sortable-table__cell">${sortedData[index][id] ?? ''}</div>`).join('')}
       </a>`);
     body.innerHTML = rows.join('');
     return body;
